@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Replace "Auto World" with Car Name -->
+    <title>Auto Wolrd | Honda City</title>
+</head>
+<body onload="pageLoader()">
+    <div id="loader">
+        <video autoplay muted>
+            <source src="../video/car-loader.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="animate-bottom" id="myDiv">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                        <div class="logo"><img src="../img/logo-b.png" alt="Auto-World" id="logo"></div>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                        <div class="contact">
+                        <a href="tel:03142238763">
+                            <i class="fa-solid fa-phone"></i>
+                            <p style="margin: 0;">0314-2238-763</p>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6  col-lg-6 col-xl-6">
+                        <div class="search-bar">
+                            <input type="search" name="search" id="search" placeholder="Search your dream car">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2  col-lg-2 col-xl-2" style="justify-content: flex-start;">
+                        <div class="user" id="add-tocart" onclick="cart()">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-nbr">1</span>
+                        </div>
+                        <div class="mode">
+                            <i class="fa-regular fa-moon" onclick="darkMode()" id="dark"></i>
+                            <i class="fa-regular fa-lightbulb" onclick="lightMode()" id="light"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header 2 -->
+            <nav>
+                <div class="container">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="nav-active">
+                            <a href="#" class="dropdown-toggle"  id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Inventory</a>
+                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                <li><a class="dropdown-item drop-active" href="../cars.html">Latest Cars</a></li>
+                                <li><a class="dropdown-item" href="../brands.html">brands</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../brands.html">Popular Brands</a></li>
+                        <li><a href="../insurance.html">Warranty / Insurance</a></li>
+                        <li><a href="../about-us.html">About us</a></li>
+                        <li><a href="../contact-us.html">Conact Us</a></li>
+                        <li style="border: 0;"><a href="../Login.html"><i class="fa-solid fa-user"></i>Sign in or Sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header Ends Here -->     
+        
+        <!-- Body Starts From Here  -->
+        <div class="container">
+            <div class="breadcrum">
+                <a href="../index.html">
+                    <h6>Home</h6>
+                </a>
+                <h6>&nbsp; / &nbsp;</h6>
+                <a href="../cars.html">
+                    <h6>Car-Listing</h6>
+                </a>
+                <h6>&nbsp; / Honda-City</h6>
+            </div>
+        </div>
+        <!-- Product-Details -->
+        <div class="inventory">
+            <div class="inventory-wrap">
+                <div class="inventory-container">
+                    <div class="inventory-img">
+                        <!-- Change Car Name -->
+                        <h1>HONDA CITY
+                        </h1>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <p>5.0(90)</p>
+                        </div>
+                        <br>
+                        <div class="w3-content" style="max-width:100%">
+                            <div class="img-holder">
+                                <!-- change image -->
+                            <img class="mySlides" src="../img/city (1).jpg" style="width:100%;">
+                            <img class="mySlides" src="../img/city (2).jpg" style="width:100%;display:none">
+                            <img class="mySlides" src="../img/city (3).jpg" style="width:100%;display:none">
+                            <img class="mySlides" src="../img/city (4).jpg" style="width:100%;display:none">
+                            <img class="mySlides" src="../img/city (5).jpg" style="width:100%;display:none">
+                            </div>
+                        <!-- change image (place image in same order) -->
+                            <div class="w3-section">
+                                <div class="w3-col s4">
+                                    <img class="demo w3-opacity w3-hover-opacity-off" src="../img/city (1).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+                                </div>
+                            <div class="w3-col s4">
+                                <img class="demo w3-opacity w3-hover-opacity-off" src="../img/city (2).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+                            </div>
+                            <div class="w3-col s4">
+                                <img class="demo w3-opacity w3-hover-opacity-off" src="../img/city (3).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+                            </div>
+                            <div class="w3-col s4">
+                                <img class="demo w3-opacity w3-hover-opacity-off" src="../img/city (4).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+                            </div>
+                            <div class="w3-col s4">
+                                <img class="demo w3-opacity w3-hover-opacity-off" src="../img/city (5).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
+                            </div>
+                            </div>
+                        </div>
+                        <br>
+                            <div class="share-post">
+                                <h6>Share: </h6>
+                                <a href="#" style="background: linear-gradient(180deg, #3b5998, #367ebd);"><i class="fa-brands fa-facebook-f"></i><p>Facebook</p></a>
+                                <a href="#" style="background: linear-gradient(140deg, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);"><i class="fa-brands fa-instagram"></i><p>Instagram</p></a>
+                                <a href="#" style="background: #1DA1F2;"><i class="fa-brands fa-twitter"></i><p>Twitter</p></a>
+                                <a href="#" style="background: #0072b1"><i class="fa-brands fa-linkedin-in"></i><p>LinkedIn</p></a>
+                                <a href="#" style="background: #25D366"><i class="fa-brands fa-whatsapp"></i><p>WhatsApp</p></a>
+                                <a href="#" style="background: #4C75A3"><i class="fa-brands fa-vk"></i><p>VK</p></a>
+                            </div>
+                    </div>
+                </div>
+                <br>
+                <div class="inventory-container">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Comparison</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Reviews</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- Description -->
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <br>
+                            <div class="details animate-bottom">
+                                <!-- Change Details -->
+                                <p>The Honda City (Japanese: ホンダ・シティ, Hepburn: Honda City) is a subcompact car which has been produced by the Japanese manufacturer Honda since 1981
+                                    The Diesel engine is 1498 cc while the Petrol engine is 1498 cc.
+                                    It is available with Manual & Automatic transmission. Depending upon the variant and fuel type the City has a mileage of 17.8 to 24.1 kmpl.
+                                    The City is a 5 seater 4 cylinder car and has length of 4549mm, width of 1748mm and a wheelbase of 2600mm.
+                                    Honda is known for its reliable cars and the City is no different. We can still see some examples of first-generation City running effortlessly.
+                                    This high reliability has garnered a lot of fans for the City.
+                                    Also, the City has been around for a while, so spare parts are easily available.
+                                    Honda City V Petrol is the top model in the Honda City lineup and the price of City top model is ₹ 10.00 Lakh.
+                                    It returns a certified mileage of 17.4 kmpl.
+                                    This V Petrol variant comes with an engine putting out 118 bhp @ 6600 rpm and 145 Nm @ 4600 rpm of max power and max torque respectively.
+                                    Honda City V Petrol is the top model in the Honda City lineup and the price of City top model is ₹ 10.00 Lakh
+                                    It returns a certified mileage of 17.4 kmpl. This V Petrol variant comes with an engine putting out 118 bhp @ 6600 rpm and 145 Nm @ 4600 rpm of max power and max torque respectively.
+                                    Hill Climb: The Honda City effortlessly climbed the hills and no out of the ordinary downshifts were required by the car while on the upward slope.
+                                    It's maintenance cost is reasonable. Performance is best inclass.
+                                    City offers good performance, all the Honda's traits of spacious and comfortable interiors, reliability,
+                                    still looks stunning has been extremely reliable and very easy to maintain from authorized Honda workshop in West Delhi.
+                                    Recently, the A/c compressor gave up bang in the middle of a highway during a family trip
+                                    On average, you can expect your Honda to last around 200,000 miles, but when maintained properly, these cars can hit over 300,000 miles.
+                                    Honda City V MT price is Rs 11.57 lakh (ex-showroom). New Honda City top speed is around 170-180 kmph.
+                                    The Honda City is undeniably a car that provides luxury like no other in the sedan segment. It has every quality a
+                                    luxurious car should possess, be it a huge cabin space, an eye-grabbing factor, and practicality coupled with a premium feel.
+                                    </p>
+                                <br>
+                                <div class="type animate-bottom">
+                                    <p><b>Color:</b> RED </p>
+                                    <p><b>Body Type:</b> COMPACT SEDAN </p>
+                                    <p><b>Model:</b> TOYOTA CITY</p>
+                                    <p><b>Engine Capacity:</b> 1500CC</p>
+                                    <p><b>Engine Type:</b> PETROL</p>
+                                    <p><b>Assembly</b> LOCAL</p>
+                                    <p><b>Year</b> 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comparison -->
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <br>
+                            <h1>Comparison with similar Brands</h1>
+                            <br>
+                            <!-- Write Comparison Between This Comments -->
+                            <!-- Cars Comparisions Portion started -->
+                            <table class="models-tables">
+                                <tr>
+                                    <th>Model:</th>
+                                        <td class="TH1"><b>Toyota Corolla-X</b></td>
+                                        <td class="TH2"><b>Honda City </b></td>
+                                    </tr>
+  
+                                <tr class="row1">
+                                    <th>Price:</th>
+                                    <td class="TD1">PKR 4,580,500</td>
+                                    <td class="TD2">PKR 4,479,000</td>
+                                </tr>
+  
+                                <tr class="row2">
+                                    <th>Engine:</th>
+                                    <td class="TD3">1496 CC <br>
+                                    130<br>
+                                    Petrol</td>
+                                    <td class="TD4">1489 CC<br>
+                                    200 Nm<br>
+                                    Diesel</td>
+                                </tr>
+  
+                                <tr class="row3">
+                                    <th>Transmission:</th>
+                                    <td class="TD5">120 bhp<br>
+                                    Automatic</td>
+                                    <td class="TD6">98 bhp<br>
+                                    Manual</td>
+                                </tr>
+  
+                                <tr class="row4">
+                                    <th>Top speed:</th>
+                                    <td class="TD7">115mph</td>
+                                    <td class="TD8">170mph</td>
+                                </tr>
+                            </table>
+                             <!-- Cars Comparisions Portion ended -->
+                            <!-- Write Comparison Between This Comments -->
+                        </div>
+                        <!-- Reviews -->
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="reviews">
+                                <br>
+                                <h1>What are other people saying?</h1>
+                                <br>
+                                <div class="review-container animate-bottom">
+                                <div class="user-input">
+                                    <div class="user-img">
+                                        <img src="../img/img-com1.jpg">
+                                    </div>
+                                    <div class="comment">
+                                        <h5>Rick Grimes</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat ipsam harum necessitatibus</p>
+                                        <p style="text-overflow: ellipsis;">numquam, illo modi alias quam enim ad. Sunt quo accusantium, atque commodi ut dignissimos? Ratione, voluptatum facere!</p>
+                                    </div>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>5.0</p>
+                                    </div>
+                                </div>
+                                <div class="review-container animate-bottom">
+                                <div class="user-input">
+                                    <div class="user-img">
+                                        <img src="../img/img-com2.jpg">
+                                    </div>
+                                    <div class="comment">
+                                        <h5>billie brown</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat ipsam harum necessitatibus</p>
+                                        <p style="text-overflow: ellipsis;">numquam, illo modi alias quam enim ad. Sunt quo accusantium, atque commodi ut dignissimos? Ratione, voluptatum facere!</p>
+                                    </div>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>5</p>
+                                    </div>
+                                </div>
+                                <div class="review-container animate-bottom">
+                                <div class="user-input">
+                                    <div class="user-img">
+                                        <img src="../img/img-com3.jpg">
+                                    </div>
+                                    <div class="comment">
+                                        <h5>Sarah Robinson</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat ipsam harum necessitatibus</p>
+                                        <p style="text-overflow: ellipsis;">numquam, illo modi alias quam enim ad. Sunt quo accusantium, atque commodi ut dignissimos? Ratione, voluptatum facere!</p>
+                                    </div>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <p>3</p>
+                                    </div>
+                                </div>
+                                <div class="review-container animate-bottom">
+                                <div class="user-input">
+                                    <div class="user-img">
+                                        <img src="../img/img-com4.jpg">
+                                    </div>
+                                    <div class="comment">
+                                        <h5>Noah Elijah</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat ipsam harum necessitatibus</p>
+                                        <p style="text-overflow: ellipsis;">numquam, illo modi alias quam enim ad. Sunt quo accusantium, atque commodi ut dignissimos? Ratione, voluptatum facere!</p>
+                                    </div>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <p>4.0</p>
+                                    </div>
+                                </div>
+                                <div class="review-container animate-bottom">
+                                <div class="user-input">
+                                    <div class="user-img">
+                                        <img src="../img/img-com5.jpg">
+                                    </div>
+                                    <div class="comment">
+                                        <h5>Cody Adams</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat ipsam harum necessitatibus</p>
+                                        <p style="text-overflow: ellipsis;">numquam, illo modi alias quam enim ad. Sunt quo accusantium, atque commodi ut dignissimos? Ratione, voluptatum facere!</p>
+                                    </div>
+                                </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <p>5.0</p>
+                                    </div>
+                                </div>
+                                <div class="review-container animate-bottom">
+                                    <div class="user-input">
+                                        <div class="user-img">
+                                            <img src="../img/img-com6.jpg">
+                                        </div>
+                                        <div class="comment">
+                                            <h5>Hannah Liam</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat ipsam harum necessitatibus</p>
+                                            <p style="text-overflow: ellipsis;">numquam, illo modi alias quam enim ad. Sunt quo accusantium, atque commodi ut dignissimos? Ratione, voluptatum facere!</p>
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <p>5.0</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="coment-form">
+                                    <h1>Write Your review</h1>
+                                    <br>
+                                    <form>
+                                        <div class="input-name">
+                                            <div class="inputbox">
+                                                <input type="name" id="FName" required="required" placeholder=" ">
+                                                <span class="Fname">First Name</span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <input type="name" id="FName" required="required" placeholder=" ">
+                                                <span class="Lname">Last Name</span>
+                                            </div>
+                                        </div>
+                                        <div class="feedback-rating">
+                                            <i class="fa-solid fa-star" onclick="style.color='goldenrod'"></i>
+                                            <i class="fa-solid fa-star" onclick="style.color='goldenrod'"></i>
+                                            <i class="fa-solid fa-star" onclick="style.color='goldenrod'"></i>
+                                            <i class="fa-solid fa-star" onclick="style.color='goldenrod'"></i>
+                                            <i class="fa-solid fa-star" onclick="style.color='goldenrod'"></i>
+                                        </div>
+                                        <div class="inputbox">
+                                            <input type="textarea" id="Yreview" required="required" placeholder=" ">
+                                            <span class="Yreview">Your Review</span>
+                                        </div>
+                                        <br>
+                                        <button class="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Related Post -->
+                <div class="related-car animate-bottom">
+                    <h1>Related Cars</h1>
+                    <div class="row" style="width: fit-content;">
+                        <div class="col-md-4">
+                            <a href="../inventory/honda-city.html">
+                                <div class="car-card carbox5" >
+                                    <div class="car-imgholder">
+                                        <img id="disapear" src="../img/city (2).jpg">
+                                        <img id="show" src="../img/city (1).jpg">
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="car-name">
+                                            <h4>HONDA CITY</h4>
+                                            <div class="rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <p>4.0</p>
+                                            </div>
+                                        </div>
+                                        <div class="car-icons">
+                                            <div class="release">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <h6>2022</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="eng-type">
+                                                <i class="fa-solid fa-gas-pump"></i>
+                                                <h6>Petrol</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="gear">
+                                                <i class="fa-solid fa-sitemap"></i>
+                                                <h6>Auto</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="cc">
+                                                <i class="fa-solid fa-gauge-high"></i>
+                                                <h6>1500cc</h6>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="card-price">
+                                            <h2>PKR  4,479,000</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="../inventory/honda-civic.html">
+                                <div class="car-card carbox6" >
+                                    <div class="car-imgholder">
+                                        <img id="disapear" src="../img/civic (4).jpg">
+                                        <img id="show" src="../img/civic (3).jpg">
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="car-name">
+                                            <h4>HONDA CIVIC</h4>
+                                            <div class="rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <p>4.0</p>
+                                            </div>
+                                        </div>
+                                        <div class="car-icons">
+                                            <div class="release">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <h6>2022</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="eng-type">
+                                                <i class="fa-solid fa-gas-pump"></i>
+                                                <h6>Petrol</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="gear">
+                                                <i class="fa-solid fa-sitemap"></i>
+                                                <h6>Auto</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="cc">
+                                                <i class="fa-solid fa-gauge-high"></i>
+                                                <h6>1500cc</h6>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="card-price">
+                                            <h2>PKR 7,549,000</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="col-md-4">
+                            <a href="../inventory/honda-br-v.html">
+                                <div class="car-card carbox4" >
+                                    <div class="car-imgholder">
+                                        <img id="disapear" src="../img/brv1.jpg">
+                                        <img id="show" src="../img/brv5.jpg">
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="car-name">
+                                            <h4>HONDA BR-V</h4>
+                                            <div class="rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <p>4.0</p>
+                                            </div>
+                                        </div>
+                                        <div class="car-icons">
+                                            <div class="release">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <h6>2020</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="eng-type">
+                                                <i class="fa-solid fa-gas-pump"></i>
+                                                <h6>Petrol</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="gear">
+                                                <i class="fa-solid fa-sitemap"></i>
+                                                <h6>Auto</h6>
+                                            </div>
+                                            <div class="vr"></div>
+                                            <div class="cc">
+                                                <i class="fa-solid fa-gauge-high"></i>
+                                                <h6>1500cc</h6>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="card-price">
+                                            <h2>PKR 3,200,000</h2>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="side-bar">
+                <div class="price">
+                    <div class="amount">
+                        <h5>Price:</h5>
+                        <!-- price In PKR -->
+                        <h2>PKR: 4,479,000</h2>
+                        <div class="checkout-btn">
+                            <button onclick="location.href='../check-out.html'">Buy Now</button>
+                            <button id="addto-cart" onclick="addCart()">Add to cart</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contact-btn">
+                        <h5>Dealer's Contact:</h5>
+                        <button id="call" onclick="location.href='tel:03142238763'"><i class="fa-solid fa-phone"></i> Call Now</button>
+                        <button id="mail" onclick="location.href='mailto:huzaifajaved062@gmail.com'"><i class="fa-solid fa-envelope"></i> Send Mail</button>
+                        <button id="call" onclick="window.open('https://wa.me/+923142238763','_blank')"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
+                    </div>
+                    <hr>
+                    <div class="dealer-details">
+                        <h5>Dealer's Location:</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115787.27509686034!2d67.07609599999998!3d24.920064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1671050730489!5m2!1sen!2s" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+                <br>
+                <div class="listing-category">
+                    <h3>Listing Categories</h3>
+                    <div class="listing-logo">
+
+                        <div class="brand-name" onclick="location.href='../brands/honda.html'">
+                            <div class="brand-logo">
+                                <img src="../img/honda.png">
+                            </div>
+                            <h5>Honda</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/toyota.html'">
+                            <div class="brand-logo">
+                                <img src="../img/toyota.png">
+                            </div>
+                            <h5>Toyota</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/suzuki.html'">
+                            <div class="brand-logo">
+                                <img src="../img/suzuki.png">
+                            </div>
+                            <h5>Suzuki</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/bmw.html'">
+                            <div class="brand-logo">
+                                <img src="../img/bmw.png">
+                            </div>
+                            <h5>BMW</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/kia.html'">
+                            <div class="brand-logo">
+                                <img src="../img/kia.png">
+                            </div>
+                            <h5>KIA</h5>
+                        </div>
+                        <div class="brand-name" onclick="location.href='../brands/bugatti.html'">
+                            <div class="brand-logo">
+                                <img src="../img/bugatti.png">
+                            </div>
+                            <h5>Bugatti</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/audi.html'">
+                            <div class="brand-logo">
+                                <img src="../img/audi.png">
+                            </div>
+                            <h5>Audi</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/merdsedes-bnez.html'">
+                            <div class="brand-logo">
+                                <img src="../img/merdsedes-bnez.png">
+                            </div>
+                            <h5>Merdsedes Bnez</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/ferrari.html'">
+                            <div class="brand-logo">
+                                <img src="../img/ferrari.png">
+                            </div>
+                            <h5>Ferrari</h5>
+                        </div>
+
+                        <div class="brand-name" onclick="location.href='../brands/lamborghini.html'">
+                            <div class="brand-logo">
+                                <img src="../img/lamborghni.png">
+                            </div>
+                            <h5>Lamborghini</h5>
+                        </div>
+
+                        <button onclick="location.href='../brands.html'">View More</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- sidebar Ends Here -->
+        </div>
+        <br>
+        <div class="footer-container">
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115821.09524100061!2d67.1612928!3d24.884019199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1671687329253!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer">
+                <div class="footer-card">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.google.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+                    </div>
+                    <h4>Let's Connect</h4>
+                    <div class="footer-details">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="footer-img">
+                                    <img src="../img/logo-b.png" id="b">
+                                </div>
+                                <p>Auto World Is A Leading Digital Marketplace And Automotive Solution Provider 
+                                    That Connects Car Buyers And Sellers.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="links">
+                                    <h3>Important Links</h3>
+                                    <ul>
+                                        <li><a href="../cars.html">Latest Cars</a></li>
+                                        <li><a href="../brands.html">Car Brands</a></li>
+                                        <li><a href="../contact-us.html">Contact Us</a></li>
+                                        <li><a href="../about-us.html">About Us</a></li>
+                                        <li><a href="../insurance.html">Warranty</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-detail">
+                                    <div class="phone">
+                                        <a href="tel:03142238763">
+                                            <i class="fas fa-phone"></i>
+                                            <div class="contact-wrap">
+                                                <h3>Call Us</h3>
+                                                <h5>03142238763</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mail">
+                                        <a href="mailto:huzaifajaved062@gmail.com">
+                                            <i class="far fa-envelope-open"></i>
+                                            <div class="contact-wrap">
+                                                <h3>Mail us</h3>
+                                                <h5>autoworld@gmail.com</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="address">
+                                        <a href="https://goo.gl/maps/QaWHs79MxJwdDwPZ6" target="_blank">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <div class="contact-wrap">
+                                                <h3>Visit Us</h3>
+                                                <h5>Karachi, sindh, Pakistan</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="transform: translate(0px, -45px);">Copyright © All rights reserved</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="../js/index.js"></script>
+    <script src="https://kit.fontawesome.com/37845d581e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AutoWorld | Cars Warranty</title>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body onload="pageLoader()">
+  <div id="loader">
+      <video autoplay muted>
+          <source src="video/car-loader.mp4" type="video/mp4">
+      </video>
+  </div>
+  <div class="animate-bottom" id="myDiv">
+      <header>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-2 col-lg-2 col-xl-2">
+                      <div class="logo"><img src="img/logo-b.png" alt="Auto-World" id="logo"></div>
+                  </div>
+                  <div class="col-md-2 col-lg-2 col-xl-2">
+                      <div class="contact">
+                      <a href="tel:03142238763">
+                          <i class="fa-solid fa-phone"></i>
+                          <p style="margin: 0;">0314-2238-763</p>
+                      </a>
+                      </div>
+                  </div>
+                  <div class="col-md-6  col-lg-6 col-xl-6">
+                      <div class="search-bar">
+                          <input type="search" name="search" id="search" placeholder="Search your dream car">
+                          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                      </div>
+                  </div>
+                  <div class="col-md-2  col-lg-2 col-xl-2" style="justify-content: flex-start;">
+                      <div class="mode">
+                          <i class="fa-regular fa-moon" onclick="darkMode()" id="dark"></i>
+                          <i class="fa-regular fa-lightbulb" onclick="lightMode()" id="light"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- header 2 -->
+          <nav>
+              <div class="container">
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li>
+                          <a href="#" class="dropdown-toggle"  id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Inventory</a>
+                          <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                              <li><a class="dropdown-item" href="cars.html">Latest Cars</a></li>
+                              <li><a class="dropdown-item" href="brands.html">brands</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="brands.html">Popular Brands</a></li>
+                      <li class="nav-active"><a href="insurance.html">Warranty / Insurance</a></li>
+                      <li><a href="about-us.html">About us</a></li>
+                      <li><a href="contact-us.html">Contact Us</a></li>
+                      <li style="border: 0;"><a href="Login.html"><i class="fa-solid fa-user"></i>Sign in or Sign up</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </header>
+      <!-- Header Ends Here -->     
+      <div class="container">
+        <div class="breadcrum">
+            <a href="index.html">
+                <h6>Home</h6>
+            </a>
+            <!-- replace "Page-Name" with car name -->
+            <h6>&nbsp; / Warranty-&-Insurance</h6>
+        </div>
+    </div>
+    <!-- Cars Warranty Form Portion started  -->
+
+    <!-- Top 10 Car Warranties Portion started-->
+      <!-- Top 10 Car Warranties Portion started-->
+      <div class="insurrance">
+
+         <!-- Cars Warranty Form Portion started  -->
+    <div class="container flex">
+      <div class="warranty animate__animated animate__bounceInDown">
+        <div class="content">
+          <h2>What Is A Car Warranty?</h2>
+          An automobile factory warranty is a contract between you and the manufacturer of the car, stating that any defects in the vehicle will be repaired or replaced. This agreement ensures that your new car is protected and guaranteed to remain at a certain quality level, as long as you take care of it and hold up your end of the bargain. Part of the terms includes having all of the warranty work performed at a dealership.
+          Car warranties can extend beyond what is offered by the manufacturer. Once your factory warranty term expires, you can get coverage with an extended warranty through the automaker or a third-party company like Endurance. Third-party companies also offer used car warranties if you are a secondary vehicle owner.
+        </div>
+      </div>
+
+      <form id="w-form" class="form-container1 animate__animated animate__bounceInDown">
+        <div class="heading1">
+          <h1 class="heading animate__animated animate__bounceInDown">Warranty <span>Registration</span></h1>
+        </div>
+
+        <div class="input-name" style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;">
+          <div class="inputbox">
+              <input type="name" id="FName" required="required" placeholder=" " style="padding: 15px;">
+              <span class="Fname">Full Name</span>
+          </div>
+        </div>
+        <div class="input-name" style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;">
+          <div class="inputbox">
+              <input type="email" id="FName" required="required" placeholder=" " style="padding: 15px;">
+              <span class="Fname">Email Address</span>
+          </div>
+          <div class="inputbox">
+            <input type="tel" maxlength="11" minlength="11" id="FName" required="required" placeholder=" " style="padding: 15px;">
+            <span class="Fname">Phone Number</span>
+        </div>
+        </div>
+        <div class="input-name" style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;">
+          <div class="inputbox">
+              <input type="text" id="FName" required="required" placeholder=" " style="padding: 15px;">
+              <span class="Fname">Address</span>
+          </div>
+        </div>
+        <div class="input-name" style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;">
+          <div class="inputbox">
+              <input id="date" type="" id="FName" required="required" placeholder=" " style="padding: 15px;">
+              <span class="Fname">Purchase Date</span>
+              <h6>When did you purchase this car?</h6>
+          </div>
+          <div class="inputbox">
+            <input  id="date2" type="" maxlength="11" minlength="11" id="FName" required="required" placeholder=" " style="padding: 15px;">
+            <span class="Fname">Installation Date</span>
+            <h6>When was the installation date?</h6>
+        </div>
+        </div>
+        <div class="input-name" style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;">
+          <div class="inputbox">
+              <input type="text" id="FName" required="required" placeholder=" " style="padding: 15px;">
+              <span class="Fname">Purchase location</span>
+              <h6>Where did you buy this car from?</h6>
+          </div>
+        </div>
+        <div class="input-name" style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;">
+          <div class="inputbox">
+              <input type="text" id="FName" required="required" placeholder=" " style="padding: 15px;">
+              <span class="Fname">Serial Number</span>
+              <h6>Shown on your warranty card</h6>
+          </div>
+        </div>
+
+        
+        <button type="submit">Submit</button>
+      </form>
+        <!-- Car Warranty Form Portion ended-->
+    </div>
+      <br><br>
+        <div class="container">
+          <h3 class="top-heading animate__animated animate__bounceInLeft">Top 10 New Cars <span>Warranties</span></h3>
+          <p class="animate__animated animate__bounceInLeft" style="text-align: center;">Here’s a closer look at 10 vehicle manufacturers that provide factory coverage for longer than the industry standard.</p>
+          <br>
+          <table class="warranty-tables">
+            <tr>
+              <th>New Car Warranty</th>
+              <th>Bumper to Bumper</th>
+              <th>Powertrain</th>
+              <th>Corrosion</th>
+              <th>Roadside Assistant</th>
+            </tr>
+
+            <tr class="row1">
+              <th>Hyundai</th>
+              <td class="TD1">5 years/60,000 miles</td>
+              <td class="TD2">10 years/100,000 miles</td>
+              <td class="TD3">7 years /unlimited miles</td>
+              <td class="TD4">5 years/unlimited miles</td>
+            </tr>
+
+            <tr class="row2">
+              <th>Kia</th>
+              <td class="TD5">5 years/60,000 miles</td>
+              <td class="TD6">10 years/100,000 miles</td>
+              <td class="TD7">5 years/100,000 miles</td>
+              <td class="TD8">5 years/60,000 miles</td>
+            </tr>
+
+            <tr class="row3">
+              <th>Genesis</th>
+              <td class="TD9">5 years/60,000 miles</td>
+              <td class="TD10">10 years/100,000 miles</td>
+              <td class="TD11">7 years/unlimited miles</td>
+              <td class="TD12">5 years/unlimited miles</td>
+            </tr>
+
+            <tr class="row4">
+              <th>Mitsubishi</th>
+              <td class="TD13">5 years/60,000 miles</td>
+              <td class="TD14">10 years/100,000 miles</td>
+              <td class="TD15">7 years/100,000 miles</td>
+              <td class="TD16">5 years/unlimited miles</td>
+            </tr>
+
+            <tr class="row5">
+              <th>Volkswagen</th>
+              <td class="TD17">6 years/72,000 miles for 2018<br>
+                and 2019 models,4 years/50,000<br>
+                miles for 2020 and later</td>
+              <td class="TD18">6 years/72,000 miles for 2018<br>
+                and 2019 models,4 years/50,000<br>
+                miles for 2020 and later</td>
+              <td class="TD19">7 years/100,000 miles</td>
+              <td class="TD20">3 years/36,000 miles</td>
+            </tr>
+
+            <tr class="row6">
+              <th>Jaguar</th>
+              <td class="TD21">5 years/60,000 miles</td>
+              <td class="TD22">5 years/60,000 miles</td>
+              <td class="TD23">6 years/unlimited miles</td>
+              <td class="TD24">5 years/60,000 miles</td>
+            </tr>
+
+            <tr class="row7">
+              <th>Infiniti</th>
+              <td class="TD25">4 years/60,000 miles</td>
+              <td class="TD26">6 years/70,000 miles</td>
+              <td class="TD27">7 years/unlimited miles</td>
+              <td class="TD28">4 years/unlimited miles</td>
+            </tr>
+
+            <tr class="row8">
+              <th>Lincoln</th>
+              <td class="TD29">4 years/50,000 miles</td>
+              <td class="TD30">6 years/70,000 miles</td>
+              <td class="TD31">5 years/unlimited miles</td>
+              <td class="TD32">Unlimited</td>
+            </tr>
+
+            <tr class="row9">
+              <th>Tesla</th>
+              <td class="TD33">4 years/50,000 miles</td>
+              <td class="TD34">8 years/mileage varies by model</td>
+              <td class="TD35">12 years/unlimited miles</td>
+              <td class="TD36">4 years/50,000 miles</td>
+            </tr>
+
+            <tr class="row10">
+              <th>Cadillac</th>
+              <td class="TD37">4 years/50,000 miles</td>
+              <td class="TD38">6 years/70,000 miles</td>
+              <td class="TD39">6 years/unlimited miles</td>
+              <td class="TD40">6 years/70,000 miles</td>
+            </tr>
+          </table>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+        <h1 class="manufacturer-heading animate__animated animate__bounceInLeft">Which Car Manufacturer Offers the Best New <span>Car Warranty?</span></h1>
+                <p class="manufacturer animate__animated animate__bounceInLeft">At a glance, it appears that Volkswagen has the best new car warranty because of the 6-year/72,000-mile bumper-to-bumper 
+        coverage, which remains accurate for 2018 and 2019 models. But the company numbers changed to 4 years or 50,000 miles with 
+        2020 and later models moving it down the list of our top 10 for those vehicles. When it comes to 2022 models, Hyundai, Kia, and 
+        Genesis dominate with the best new car warranties on the market.
+
+        While all of these brands sell cars and SUVs, you might notice that none of them have a truck in production right now. If you want 
+        a pickup with the best warranty, you have a variety of options to choose from. Chevrolet, GMC, Ram, Ford, and Jeep all offer the 
+        same 3-year/36,000-mile bumper-to-bumper coverage and  5-year/60,000-mile powertrain coverage.</p><br>
+
+        <h1 class="manufacturer-heading animate__animated animate__bounceInLeft">What Makes A Good <span>Car Warranty?</span></h1>
+                <p class="manufacturer animate__animated animate__bounceInLeft">To make a decision on the best new car warranty, we first have to consider the following criteria:
+
+        <br><b>Length:</b> Factory warranties come with limits. You will notice that most new car warranty terms include both years and mileage. 
+        So, if a warranty states that coverage continues for 3 years or 36,000 miles, the owner is no longer covered once one of those mile-
+        stones is reached. The longer the term, the better the warranty generally is. In most cases, powertrain warranties have longer terms 
+        than bumper-to-bumper coverage, mainly because a powertrain warranty covers fewer components.<br>
+        <b>Inclusions:</b> New car warranties often feature a list of what’s included. You should examine this and make sure you understand to
+        which parts are covered in case a defect occurs.<br>
+        <b>Exclusions:</b> In the same way, you must look at the list of exclusions, if applicable. These parts will not be covered by the manufacturer 
+        if something goes wrong. Bumper-to-bumper warranties tend to come with the most coverage, so the list of exclusions should be the 
+        relatively short.<br>
+        <b>Additional benefits:</b> Some new car warranties only feature a few perks, but others have numerous benefits. Look for roadside assistan-
+        ce, rental car reimbursement, and trip interruption coverage during your search for the best new car warranty. On top of that, you might find 
+        a few manufacturers that provide free oil changes or towing, as well.</p><br>
+
+        <h1 class="manufacturer-heading animate__animated animate__bounceInLeft">What Dealer Has The Best New <span>Car Warranty?</span></h1>
+                <p class="manufacturer animate__animated animate__bounceInLeft">We have looked at all of the brands to determine which one provides the best coverage. Here are the top four companies, plus the warranties 
+        offered.<br>
+        <b>Hyundai: 5 Years/60,000 Miles</b><br>
+        With Volkswagen dropping down the ranks with its 2020 new car warranty, Hyundai is at the top of the list for the best new car warranty in 
+        2020. Its factory warranty provides great bumper-to-bumper and powertrain protection. Combine that with high-reliability ratings, and 
+        Hyundai gives the competition a run for its money.<br>
+        The bumper-to-bumper coverage lasts offers 5 years or 60,000 miles of coverage and is now one of the longest on the market. Then, the 
+        automaker adds in a powertrain warranty lasting 10 years or 100,000 miles. That’s twice as long as some other companies will protect the 
+        engine and drivetrain. What put this organization above the rest is the inclusion of roadside assistance (5 years) and a corrosion warranty 
+        (7 years), both with no mileage limit.<br>
+        <b>Kia: 5 Years/60,000 Miles</b><br>
+        Kia was once known as a budget manufacturer, but it has quickly become one of the top brands in the industry. Not only are Kia vehicles 
+        affordable, but the warranty rivals that of its sister brand, Hyundai. It also features the same bumper-to-bumper coverage lasting 5 years or 
+        60,000 miles. Plus, it provides powertrain protection for 10 years or 100,000 miles.<br>
+        The only difference is that Kia has shorter term lengths for roadside assistance and corrosion. Roadside assistance is capped at 60,000 miles, 
+        while the corrosion protection ends with 100,000 miles. Still, neither of these is worth complaining about, since it is longer than most warranty 
+        coverage from other automakers.<br>
+        <b>Genesis: 5 Years/60,000 Miles</b><br>
+        Genesis is the luxury offshoot of Hyundai, so its reputation runs high. The automaker ties with Hyundai for term lengths with 5 years or 60,000 
+        miles of bumper-to-bumper protection and 10 years or 100,000 miles of powertrain protection. In our book, that makes Genesis one of the 
+        best new vehicle warranty providers in the market.<br>
+        <b>Mitsubishi: 5 Years/60,000 miles</b><br>
+        Mitsubishi is another automaker that offers a long bumper-to-bumper warranty on 2022 vehicles. Coverage lasts for 5 years/60,000 miles. 
+        It also offers a 100,000-mile powertrain warranty, which gets cut short to 5 years/60,000 miles for secondary owners.<br>
+        <b>Volkswagen: 6 Years/72,000 Miles For 2018 And 2019 Models</b><br>
+        Volkswagen continues to stand on its strong German reputation of quality and pcise engineering. Because the automaker offers reliable 
+        vehicles, it is a no-brainer for the company to provide a long warranty term.<br>
+        While Volkswagen’s current 2022 new car warranty doesn’t top our list – although it still makes it into our top 10 with 4 years or 50,000 miles 
+        of bumper-to-bumper protection – we can’t ignore the fact that Volkswagen offered the best new car warranty around on its 2018 and 2019 
+        models. If your vehicle falls into that category, you are protected with 6 years or 72,000 miles of bumper-to-bumper and powertrain coverage. 
+        There’s no beating that.</p>
+
+        <h1 class="manufacturer-heading best animate__animated animate__bounceInLeft">Best Luxury <span>Warranties</span></h1>
+        <p class="manufacturer animate__animated animate__bounceInLeft">Jaguar stands out as having the best bumper-to-bumper warranty for a luxury brand, which lasts for 5 years/60,000 miles. Tesla offers an 
+        8-year warranty on its battery and drive unit system (mileage expires between 100,000 and 150,000 depending on the model). Acura and 
+        Lexus also offer a longer powertrain warranty of 6 years/70,000 miles.
+
+        <h1 class="manufacturer-heading new animate__animated animate__bounceInLeft">New Car Warranty: <span>Conclusion</span></h1>
+        <p class="manufacturer animate__animated animate__bounceInLeft">Automakers Hyundai, Kia, and Genesis offer the best new car warranties on the market. Each manufacturer offers an industry-best 5-year/
+        60,000-mile new car limited warranty and a 100,000-mile powertrain warranty. Mitsubishi, Volkswagen, and Jaguar also offer better-than
+        average factory warranties on their new vehicles.</p>
+        </p>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+          <section>
+            <h4 class="title">Best New Car Warranty: FAQ</h4>
+
+            <div class="faq">
+              <div class="question">
+                <h5>Who has the best new car warranty right now?</h5>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                  <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+
+              </div>
+              <div class="answer">
+                <p>
+                  At this time, Kia, Mitsubishi, Hyundai, and Genesis all offer the best new vehicle limited warranty of 5 years or 60,000 miles plus a 100,000-mile powertrain warranty. The powertrain warranty is only applicable to original owners and CPO vehicles.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <div class="question">
+                <h5>What car has a 100,000-mile warranty?</h5>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                  <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+
+              </div>
+              <div class="answer">
+                <p>
+                  You can get a 100,000-mile powertrain warranty on a new car from Hyundai, Genesis, Mitsubishi, or Kia. Be aware that this only covers the engine, transmission, and drivetrain. No manufacturer offers a 100,000-mile bumper-to-bumper warranty.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <div class="question">
+                <h5>What cars have a seven-year warranty</h5>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                  <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+
+              </div>
+              <div class="answer">
+                <p>
+                  No new 2022 vehicles have a seven-year warranty for either bumper-to-bumper or powertrain coverage. However, a number of manufacturers offer seven-year warranties for perforation from corrosion. These sometimes last for unlimited miles.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+<!-- footer -->
+<div class="footer-container">
+    <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115821.09524100061!2d67.1612928!3d24.884019199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1671687329253!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="footer">
+        <div class="footer-card">
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.google.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <h4>Let's Connect</h4>
+            <div class="footer-details">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-img">
+                            <img src="img/logo-b.png" id="b">
+                        </div>
+                        <p>Auto World Is A Leading Digital Marketplace And Automotive Solution Provider 
+                            That Connects Car Buyers And Sellers.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="links">
+                            <h3>Important Links</h3>
+                            <ul>
+                                <li><a href="cars.html">Latest Cars</a></li>
+                                <li><a href="brands.html">Car Brands</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="insurance.html">Warranty</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-detail">
+                            <div class="phone">
+                                <a href="tel:03142238763">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="contact-wrap">
+                                        <h3>Call Us</h3>
+                                        <h5>03142238763</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mail">
+                                <a href="mailto:huzaifajaved062@gmail.com">
+                                    <i class="far fa-envelope-open"></i>
+                                    <div class="contact-wrap">
+                                        <h3>Mail us</h3>
+                                        <h5>autoworld@gmail.com</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="address">
+                                <a href="https://goo.gl/maps/QaWHs79MxJwdDwPZ6" target="_blank">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="contact-wrap">
+                                        <h3>Visit Us</h3>
+                                        <h5>Karachi, sindh, Pakistan</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="transform: translate(0px, -45px);">Copyright © All rights reserved</p>
+    </div>
+</div>
+
+</div>
+<script>
+date.addEventListener('focusin',function(e){
+  e.target.type = 'date';
+});
+
+date.addEventListener('focusout',function(e){
+  e.target.type = '';
+});
+
+date2.addEventListener('focusin',function(e){
+  e.target.type = 'date';
+});
+
+date2.addEventListener('focusout',function(e){
+  e.target.type = '';
+});
+</script>
+<script src="js/index.js"></script>
+<script src="https://kit.fontawesome.com/37845d581e.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
